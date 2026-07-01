@@ -1,0 +1,411 @@
+:root {
+  --color-bg: #fafafa;
+  --color-dark: #111111;
+  --color-accent: #ff3b3b;
+  --color-card: #ffffff;
+  --color-muted: #666666;
+  --color-border: #e0e0e0;
+
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --max-width: 1080px;
+
+  --space-section-desktop: 96px;
+  --space-section-mobile: 56px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+/* Layout helpers */
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: var(--space-section-desktop) 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-intro {
+  max-width: 640px;
+  margin-bottom: 2rem;
+}
+
+.boundary-line {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-top: 1.5rem;
+}
+
+.note-under-cards,
+.fallback-note {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+/* Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-dark);
+  color: #ffffff;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.logo-text {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.nav-cta {
+  flex-shrink: 0;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-dark);
+  border-color: var(--color-dark);
+}
+
+/* Hero */
+
+.hero {
+  background: var(--color-dark);
+  color: #ffffff;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-sub {
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-support {
+  font-size: 0.95rem;
+  color: #dddddd;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #bbbbbb;
+  margin-bottom: 0.5rem;
+}
+
+.hero-cta-row {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hero-visual .hero-card {
+  background: #1b1b1b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #333333;
+}
+
+.hero-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.hero-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-card li {
+  padding: 0.25rem 0;
+  border-bottom: 1px solid #333333;
+}
+
+.hero-card li:last-child {
+  border-bottom: none;
+}
+
+/* Cards & grids */
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.cards-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cards-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  background: var(--color-card);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Plans */
+
+.plan-card ul {
+  padding-left: 1.2rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.plan-for {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+.plan-price {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.plan-emphasis {
+  border-color: var(--color-accent);
+}
+
+.note-under-cards {
+  max-width: 640px;
+}
+
+/* Steps */
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.step {
+  background: var(--color-card);
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+}
+
+.step-number {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: #f0f0f0;
+  margin-bottom: 0.5rem;
+}
+
+/* FAQ */
+
+.faq {
+  max-width: 720px;
+}
+
+.faq-item + .faq-item {
+  margin-top: 1.25rem;
+}
+
+.faq-item h3 {
+  margin-bottom: 0.4rem;
+}
+
+/* Contact */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 2rem;
+}
+
+.contact-cta .card {
+  height: 100%;
+}
+
+.contact-cta .boundary-line {
+  margin-top: 1rem;
+}
+
+/* Footer */
+
+.site-footer {
+  background: var(--color-dark);
+  color: #cccccc;
+  padding: 1.5rem 0;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.site-footer a {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* CTA rows */
+
+.cta-row {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .cards-3,
+  .steps-grid,
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .section {
+    padding: var(--space-section-mobile) 0;
+  }
+
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero {
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+  .cards-2,
+  .cards-3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-cta-row,
+  .cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
