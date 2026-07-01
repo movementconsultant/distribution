@@ -1,409 +1,553 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Texas Movement Distribution – IP Defense & Ops for Creators</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-        content="Texas Movement Distribution handles IP defense and distribution operations for creators, artists, influencers, athletes, and founders so they can keep publishing without babysitting platforms.">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Texas Movement Distribution — IP defense, catalog, and platform ops.</title>
+    <meta
+      name="description"
+      content="Texas Movement Distribution protects catalogs and runs platform operations. IP defense, catalog protection, and disciplined listing management for brands, labels, and partners."
+    />
+    <link rel="canonical" href="https://distribution.texasmovement.com" />
 
-<header class="site-header">
-  <div class="header-inner">
-    <div class="logo">
-      <span class="logo-mark">TMD</span>
-      <span class="logo-text">Texas Movement Distribution</span>
-    </div>
-    <nav class="nav">
-      <a href="#who">Who it's for</a>
-      <a href="#features">What we do</a>
-      <a href="#plans">Plans</a>
-      <a href="#how">How it works</a>
-      <a href="#system">System context</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="nav-cta">
-      <a class="btn btn-primary"
-         href="mailto:tmlicensinganddistribution@gmail.com?subject=New%20Takedown%20Request">Start a Takedown</a>
-    </div>
-  </div>
-</header>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Texas Movement Distribution — IP defense, catalog, and platform ops." />
+    <meta
+      property="og:description"
+      content="Rights-and-catalog function of Texas Movement. IP defense operations, catalog protection, and platform-native listing management."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://distribution.texasmovement.com" />
+    <meta property="og:image" content="/og-texas-movement-distribution.png" />
+    <meta property="og:site_name" content="Texas Movement Distribution" />
 
-<main>
-  <!-- Hero -->
-  <section class="section hero" id="top">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <p class="eyebrow">TEXAS MOVEMENT DISTRIBUTION</p>
-        <h1>We run the platform side so you can keep creating.</h1>
-        <p class="hero-sub">
-          Texas Movement Distribution handles IP defense and distribution operations for creators, artists, influencers,
-          athletes, and founders — takedowns, rights cleanup, release logistics, and monitoring — so you're not spending
-          your week fighting platforms and re-uploads.
-        </p>
-        <p class="hero-support">
-          We're an operations partner. We manage process and platforms; we don't provide legal advice, and we're not a law firm.
-        </p>
-        <div class="hero-cta-row">
-          <a class="btn btn-primary"
-             href="mailto:tmlicensinganddistribution@gmail.com?subject=New%20Takedown%20Request">Start a Takedown</a>
-          <a class="btn btn-secondary"
-             href="mailto:tmlicensinganddistribution@gmail.com?subject=Question%20for%20Texas%20Movement%20Distribution">Talk to the team</a>
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Texas Movement Distribution — IP defense, catalog, and platform ops." />
+    <meta
+      name="twitter:description"
+      content="Texas Movement Distribution is the rights-and-catalog function of the Texas Movement ecosystem."
+    />
+    <meta name="twitter:image" content="/og-texas-movement-distribution.png" />
+
+    <!-- JSON-LD (sketched, to be wired into your build system) [file:153] -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://distribution.texasmovement.com#org",
+        "name": "Texas Movement Distribution",
+        "url": "https://distribution.texasmovement.com",
+        "parentOrganization": {
+          "@type": "Organization",
+          "@id": "https://texasmovement.com#org",
+          "name": "Texas Movement International"
+        },
+        "founder": {
+          "@type": "Person",
+          "@id": "https://alexandermathai.com/person",
+          "name": "Alexander Mathai"
+        },
+        "sameAs": [
+          "https://texasmovement.com",
+          "https://hero.texasmovement.com"
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://distribution.texasmovement.com#website",
+        "url": "https://distribution.texasmovement.com",
+        "name": "Texas Movement Distribution",
+        "publisher": {
+          "@id": "https://distribution.texasmovement.com#org"
+        }
+      }
+    </script>
+    <!-- FAQPage would be added from the FAQ section content per blueprint. [file:153] -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #020617;
+        --fg-primary: #e2e8f0;
+        --fg-secondary: #cbd5e1;
+        --fg-muted: #94a3b8;
+        --border-soft: rgba(148, 163, 184, 0.25);
+        --border-card: rgba(148, 163, 184, 0.22);
+        --accent: #38bdf8;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg-secondary);
+        font-family: "Inter", system-ui, sans-serif;
+        line-height: 1.6;
+      }
+
+      .page {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2rem 1.25rem 3rem;
+      }
+
+      .topbar,
+      .hero,
+      .section,
+      .footer {
+        margin-bottom: 2rem;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+        border-bottom: 1px solid var(--border-soft);
+        padding-bottom: 1rem;
+      }
+
+      .brand {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+      }
+
+      .brand-mark {
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid rgba(148, 163, 184, 0.6);
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+      }
+
+      .brand-name {
+        font-weight: 700;
+        color: var(--fg-primary);
+      }
+
+      .brand-subtitle {
+        font-size: 0.9rem;
+        color: var(--fg-muted);
+      }
+
+      .nav {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .nav a {
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+
+      .nav a:hover {
+        text-decoration: underline;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
+        gap: 1.5rem;
+        align-items: start;
+        padding-top: 0.5rem;
+      }
+
+      .eyebrow {
+        color: #60a5fa;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+      }
+
+      h1 {
+        font-size: clamp(2.3rem, 4.2vw, 3.8rem);
+        line-height: 1.05;
+        color: var(--fg-primary);
+        margin: 0 0 0.5rem;
+      }
+
+      .hero-sub {
+        font-size: clamp(1.7rem, 3.1vw, 2.8rem);
+        line-height: 1.1;
+        color: var(--fg-secondary);
+        margin: 0 0 1rem;
+      }
+
+      .hero-body {
+        font-size: 0.98rem;
+        color: var(--fg-secondary);
+        max-width: 60ch;
+      }
+
+      h2 {
+        font-size: 0.95rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--fg-muted);
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        margin: 0 0 0.4rem;
+        color: var(--fg-primary);
+        font-size: 0.92rem;
+      }
+
+      .hero-card,
+      .card,
+      .faq-item,
+      .contact {
+        border: 1px solid var(--border-card);
+        border-radius: 1rem;
+        background: rgba(15, 23, 42, 0.55);
+      }
+
+      .hero-card {
+        overflow: hidden;
+      }
+
+      .hero-card-body {
+        padding: 1rem;
+      }
+
+      .hero-card-title {
+        margin: 0 0 0.35rem;
+        color: var(--fg-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.78rem;
+      }
+
+      .cta-row {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        margin-top: 1.25rem;
+      }
+
+      .button {
+        padding: 0.75rem 1rem;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .button.primary {
+        background: var(--accent);
+        color: var(--bg);
+      }
+
+      .button.secondary {
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        color: #e5e7eb;
+      }
+
+      .section {
+        padding-top: 0.5rem;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .card,
+      .faq-item {
+        padding: 1rem;
+      }
+
+      .bullets {
+        display: grid;
+        gap: 0.75rem;
+        max-width: 70ch;
+      }
+
+      .faq {
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .contact {
+        padding: 1rem;
+      }
+
+      .contact .fineprint {
+        font-size: 0.85rem;
+        color: var(--fg-muted);
+      }
+
+      .footer {
+        border-top: 1px solid var(--border-soft);
+        padding-top: 1rem;
+        color: var(--fg-muted);
+        font-size: 0.9rem;
+      }
+
+      .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .footer-links {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.85rem;
+      }
+
+      .footer-links a {
+        color: var(--fg-secondary);
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-separator {
+        color: #64748b;
+      }
+
+      @media (max-width: 800px) {
+        .hero,
+        .cards {
+          grid-template-columns: 1fr;
+        }
+
+        .topbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .footer-row {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">TD</div>
+          <div class="brand-copy">
+            <div class="brand-name">Texas Movement Distribution</div>
+            <div class="brand-subtitle">Rights & catalog layer · Distribution</div>
+          </div>
         </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-card">
-          <h3>What we run</h3>
-          <ul>
-            <li>Enforcement</li>
-            <li>Distribution</li>
-            <li>Rights</li>
-            <li>Monitoring</li>
-          </ul>
+        <nav class="nav">
+          <a href="#overview">Overview</a>
+          <a href="#who">Who it’s for</a>
+          <a href="#how">How it works</a>
+          <a href="#services">Services</a>
+          <a href="#ecosystem">Ecosystem</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <section id="overview" class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">IP DEFENSE · CATALOG · PLATFORM OPS</p>
+          <h1>Protect the catalog. Run the platform.</h1>
+          <p class="hero-sub">
+            IP defense and platform operations for brands and catalogs that need their rights and listings managed with
+            discipline.
+          </p>
+          <p class="hero-body">
+            Texas Movement Distribution is the rights-and-catalog function of the ecosystem. It is for brand owners,
+            labels, sellers, and partners whose catalog and IP are exposed across platforms. It solves the problem of
+            listings drifting out of control and infringement going unaddressed. It works by putting rights first,
+            keeping documented records, operating platform-native, and enforcing through a calm, repeatable workflow. It
+            connects directly to HERO—the catalog it protects—and to Consulting for systems support. This is operations,
+            not legal counsel. It supports your attorneys; it does not replace them.
+          </p>
+          <div class="cta-row">
+            <a class="button primary" href="#services">See services</a>
+            <a class="button secondary" href="mailto:movementconsultant@gmail.com">Open a partner inquiry</a>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Who it's for -->
-  <section class="section" id="who">
-    <div class="container">
-      <h2 class="section-title">Built for people who publish for a living.</h2>
-      <p class="section-intro">
-        If your work lives on platforms, your work gets copied, mis-credited, and re-uploaded.
-        We handle that side so it doesn't eat your time.
-      </p>
-      <div class="grid cards-2">
-        <article class="card">
-          <h3>Music artists, producers & labels</h3>
-          <p>Releases, splits, catalog rights, and pulling stolen or leaked audio off platforms.</p>
-        </article>
-        <article class="card">
-          <h3>YouTube, TikTok & Instagram creators</h3>
-          <p>Re-uploads, stolen clips, and false claims against your own content.</p>
-        </article>
-        <article class="card">
-          <h3>Influencers, personalities & actors</h3>
-          <p>Likeness misuse, impersonation accounts, and unauthorized reposts.</p>
-        </article>
-        <article class="card">
-          <h3>Podcast hosts, streamers & live talent</h3>
-          <p>Ripped episodes, clip theft, and feed/distribution cleanup across services.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+        <aside class="hero-card">
+          <div class="hero-card-body">
+            <p class="hero-card-title">What this page is</p>
+            <p>
+              This is the rights and catalog layer of Texas Movement. It shows how Distribution protects catalogs, runs
+              platforms, and connects to HERO and the wider system.
+            </p>
+          </div>
+        </aside>
+      </section>
 
-  <!-- What we do -->
-  <section class="section" id="features">
-    <div class="container">
-      <h2 class="section-title">What we actually do.</h2>
-      <p class="section-intro">Concrete operations, not vibes. Here's the work.</p>
-
-      <div class="grid cards-3">
-        <article class="card">
-          <h3>Takedowns & enforcement</h3>
+      <section id="who" class="section">
+        <h2>Who it’s for</h2>
+        <div class="bullets">
           <p>
-            We file and manage platform takedown requests (DMCA and platform-native claims), track them to resolution,
-            and follow up when infringers come back. You approve; we execute.
+            Brand owners and partners with real catalog and IP exposure—products, media, and identity that appear across
+            marketplaces and social surfaces and need to stay accurate and authorized.
           </p>
-        </article>
-        <article class="card">
-          <h3>Distribution operations</h3>
           <p>
-            We handle the logistics of getting releases and content where they need to go, and keep listings,
-            metadata, and links consistent across services.
+            Teams that are tired of playing defense reactively and want a documented, repeatable operation instead of a
+            scramble every time something breaks.
           </p>
-        </article>
-        <article class="card">
-          <h3>Rights & catalog cleanup</h3>
           <p>
-            We organize your ownership: splits, credits, release metadata, and a clean record of what you own
-            so disputes are faster to win.
-          </p>
-        </article>
-        <article class="card">
-          <h3>Monitoring & detection</h3>
-          <p>
-            We watch for re-uploads, impersonation, and stolen content, and flag it before it spreads instead of after.
-          </p>
-        </article>
-        <article class="card">
-          <h3>Platform dispute handling</h3>
-          <p>
-            When a claim hits your content by mistake, we manage the counter-process so you're not stuck in a support queue.
-          </p>
-        </article>
-        <article class="card">
-          <h3>Reporting</h3>
-          <p>
-            You get a plain-language record of what we found, what we filed, and where it stands — no dashboards you have to babysit.
-          </p>
-        </article>
-      </div>
-
-      <p class="boundary-line">
-        Texas Movement Distribution is an operations service, not a law firm, and does not provide legal advice.
-      </p>
-
-      <div class="cta-row">
-        <a class="btn btn-primary"
-           href="mailto:tmlicensinganddistribution@gmail.com?subject=New%20Takedown%20Request">Start a Takedown</a>
-        <a class="btn btn-secondary"
-           href="mailto:tmlicensinganddistribution@gmail.com?subject=Question%20for%20Texas%20Movement%20Distribution">Talk to the team</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Plans -->
-  <section class="section" id="plans">
-    <div class="container">
-      <h2 class="section-title">Plans.</h2>
-      <p class="section-intro">
-        Start with a single takedown or hand us the ongoing work. No lock-in language you'll regret.
-      </p>
-
-      <div class="grid cards-3">
-        <article class="card plan-card">
-          <h3>Per-Incident</h3>
-          <p class="plan-for">You have a specific theft or false claim right now.</p>
-          <ul>
-            <li>Single takedown or dispute, managed end to end</li>
-            <li>Follow-up if the same infringer returns within a reasonable window</li>
-            <li>Plain-language status updates</li>
-          </ul>
-          <p class="plan-price">Price: quoted per case once we review the situation.</p>
-          <a class="btn btn-primary"
-             href="mailto:tmlicensinganddistribution@gmail.com?subject=New%20Takedown%20Request">Start a Takedown</a>
-        </article>
-
-        <article class="card plan-card plan-emphasis">
-          <h3>Managed</h3>
-          <p class="plan-for">You publish constantly and want it handled.</p>
-          <ul>
-            <li>Ongoing monitoring for re-uploads and impersonation</li>
-            <li>Takedowns and disputes included as part of an agreed monthly scope</li>
-            <li>Distribution ops and rights cleanup for your active catalog</li>
-            <li>Monthly reporting with a clear summary of activity</li>
-          </ul>
-          <p class="plan-price">Price: monthly retainer, tailored to your volume and risk profile.</p>
-          <a class="btn btn-secondary"
-             href="mailto:tmlicensinganddistribution@gmail.com?subject=Question%20for%20Texas%20Movement%20Distribution">Talk to the team</a>
-        </article>
-
-        <article class="card plan-card">
-          <h3>Label / Roster</h3>
-          <p class="plan-for">Multiple artists or creators under one roof.</p>
-          <ul>
-            <li>Everything in Managed, across a roster</li>
-            <li>Catalog-wide rights organization</li>
-            <li>Priority handling and a named point of contact</li>
-          </ul>
-          <p class="plan-price">Price: custom — we quote once we understand your roster and catalog.</p>
-          <a class="btn btn-secondary"
-             href="mailto:tmlicensinganddistribution@gmail.com?subject=Question%20for%20Texas%20Movement%20Distribution">Talk to the team</a>
-        </article>
-      </div>
-
-      <p class="note-under-cards">
-        Not sure which fits? Start with a single takedown, or email us and we'll tell you honestly whether you even need us yet.
-      </p>
-    </div>
-  </section>
-
-  <!-- System context -->
-  <section class="section" id="system">
-    <div class="container">
-      <h2 class="section-title">Where Texas Movement Distribution fits.</h2>
-      <p class="section-intro">
-        Texas Movement Distribution is one lane inside Texas Movement International — a systems company building
-        infrastructure for footwear, performance, media, consulting, and strategic operations.
-      </p>
-      <p>
-        The distribution lane exists for people whose work is already public: promoters, artists, creators, influencers,
-        athletes, and founders who need their catalog protected and their platform operations handled without turning
-        every week into a crisis. When a situation calls for more than IP defense — better workflows, stronger systems,
-        or deeper operating support — we route that work into the broader Texas Movement ecosystem instead of stretching
-        this lane out of shape.
-      </p>
-      <p>
-        The principle is simple: one clear job per vertical. Distribution focuses on IP defense and platform ops. Other
-        divisions handle performance, apparel, media, and consulting — all under a shared standard for how we operate,
-        communicate, and treat the people in the room.
-      </p>
-      <p>
-        To see the full system, visit
-        <a href="https://texasmovement.com" target="_blank" rel="noopener">TexasMovement.com</a>.
-      </p>
-    </div>
-  </section>
-
-  <!-- Proof -->
-  <section class="section" id="proof">
-    <div class="container">
-      <h2 class="section-title">Proof, not promises.</h2>
-      <p class="section-intro">
-        We've run operations for a mix of independent creators, athletes, and founders, and we're building a public
-        record of that work as cases close and clients agree to be named.
-      </p>
-
-      <p class="fallback-note">
-        For now, we keep the proof simple: references, examples, and call notes are shared directly with serious
-        partners and clients, not as marketing copy. If you want to see how we've handled situations like yours,
-        ask in your email and we'll share what we can without compromising anyone's privacy.
-      </p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section" id="faq">
-    <div class="container faq">
-      <h2 class="section-title">Straight answers.</h2>
-
-      <div class="faq-item">
-        <h3>Are you a law firm?</h3>
-        <p>
-          No. Texas Movement Distribution is an operations service. We manage takedown, distribution,
-          and monitoring processes. We do not provide legal advice or representation. For legal questions,
-          talk to a licensed attorney.
-        </p>
-      </div>
-      <div class="faq-item">
-        <h3>What can you actually get removed?</h3>
-        <p>
-          Content that infringes rights you can document — stolen audio, re-uploaded video, impersonation,
-          unauthorized reposts. We work through each platform's legitimate process. We don't do anything shady,
-          and we don't promise removals we can't earn.
-        </p>
-      </div>
-      <div class="faq-item">
-        <h3>Do you guarantee results?</h3>
-        <p>
-          No, and be skeptical of anyone who does. Platforms make final calls. We commit to running the process
-          correctly, persistently, and on time — including follow-up when infringers come back.
-        </p>
-      </div>
-      <div class="faq-item">
-        <h3>How fast is a takedown?</h3>
-        <p>
-          Timelines depend on the platform and the claim. At intake, we give you a realistic expectation based on
-          similar cases, not a marketing number.
-        </p>
-      </div>
-      <div class="faq-item">
-        <h3>Which platforms do you cover?</h3>
-        <p>
-          We primarily work across the major music, video, and social platforms — including YouTube, TikTok, Instagram,
-          Facebook, Spotify, and other leading services. If you're dealing with a niche platform, we'll tell you quickly
-          whether we can help.
-        </p>
-      </div>
-      <div class="faq-item">
-        <h3>Do you take ownership of my content or catalog?</h3>
-        <p>
-          No. You own everything. We organize and defend it; we never take a stake in your IP.
-        </p>
-      </div>
-      <div class="faq-item">
-        <h3>What does it cost?</h3>
-        <p>
-          We quote after we understand your situation. Per-incident work is priced case by case; ongoing managed work
-          and roster protection are priced to match your volume and risk, not a one-size-fits-all package.
-        </p>
-      </div>
-      <div class="faq-item">
-        <h3>How do you handle my information?</h3>
-        <p>
-          We use the links and evidence you send only to assess and run your case. We don't sell your data or share it
-          outside your team and any counsel you authorize.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- How it works -->
-  <section class="section" id="how">
-    <div class="container">
-      <h2 class="section-title">How it works.</h2>
-      <p class="section-intro">
-        Four steps. You stay in control of every decision; we do the running around.
-      </p>
-
-      <div class="steps-grid">
-        <div class="step">
-          <span class="step-number">01</span>
-          <h3>Intake</h3>
-          <p>You send us the problem or the ongoing scope. We tell you what we can and can't do, up front.</p>
-        </div>
-        <div class="step">
-          <span class="step-number">02</span>
-          <h3>Assess</h3>
-          <p>We confirm what you own, gather the evidence, and map the fastest legitimate path.</p>
-        </div>
-        <div class="step">
-          <span class="step-number">03</span>
-          <h3>Act</h3>
-          <p>We file, dispute, distribute, or monitor — whatever the job is — and track it to resolution.</p>
-        </div>
-        <div class="step">
-          <span class="step-number">04</span>
-          <h3>Report</h3>
-          <p>You get a clear record of what happened and what's still open. Repeat as needed.</p>
-        </div>
-      </div>
-
-      <div class="cta-row">
-        <a class="btn btn-primary"
-           href="mailto:tmlicensinganddistribution@gmail.com?subject=New%20Takedown%20Request">Start a Takedown</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact / Start a takedown -->
-  <section class="section" id="contact">
-    <div class="container contact-grid">
-      <div class="contact-info">
-        <h2 class="section-title">Start a takedown.</h2>
-        <p class="section-intro">
-          Send us the problem and we'll tell you what we can do — honestly — before you agree to anything.
-          We aim to respond within one business day.
-        </p>
-        <h3>What to include</h3>
-        <ul>
-          <li>Links to your original work (proof you own it)</li>
-          <li>Links to the infringing content or account</li>
-          <li>What platform(s) it's on</li>
-          <li>Whether it's a one-off or an ongoing pattern</li>
-        </ul>
-      </div>
-      <div class="contact-cta">
-        <div class="card">
-          <h3>Get in touch</h3>
-          <p>Email for now — this will be replaced by an intake form as volume grows.</p>
-          <a class="btn btn-primary"
-             href="mailto:tmlicensinganddistribution@gmail.com?subject=New%20Takedown%20Request">Start a Takedown</a>
-          <a class="btn btn-secondary"
-             href="mailto:tmlicensinganddistribution@gmail.com?subject=Question%20for%20Texas%20Movement%20Distribution">Talk to the team</a>
-          <p class="boundary-line">
-            Texas Movement Distribution is an operations service, not a law firm, and does not provide legal advice.
+            It is not for anyone seeking legal advice or a one-click fix. Enforcement here is evidence-based and takes
+            discipline.
           </p>
         </div>
-      </div>
-    </div>
-  </section>
-</main>
+      </section>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© 2026 Texas Movement Distribution — a division of Texas Movement International.</p>
-    <p>
-      <a href="https://texasmovement.com" target="_blank" rel="noopener">Visit TexasMovement.com</a>
-    </p>
-  </div>
-</footer>
+      <section id="how" class="section">
+        <h2>How it works</h2>
+        <div class="bullets">
+          <p><strong>Rights first.</strong> The catalog is grounded in clear rights records before anything touches a platform.</p>
+          <p><strong>Documented chain.</strong> Every action—from listing changes to enforcement—is documented so it holds up when challenged.</p>
+          <p><strong>Platform-native.</strong> Operations run in the surfaces where your catalog lives, not in abstract spreadsheets.</p>
+          <p><strong>Enforce calmly.</strong> Infringement is handled through a repeatable workflow, backed by records, not panic.</p>
+        </div>
+      </section>
 
-</body>
+      <section id="services" class="section">
+        <h2>Services</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>IP defense operations</h3>
+            <p>
+              We monitor the surfaces where your brand appears, document infringement and misuse, and act through a
+              repeatable takedown workflow. The result is enforcement that is calm, consistent, and backed by records.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Catalog protection</h3>
+            <p>
+              We keep listings accurate, authorized, and consistent across platforms and prevent unauthorized or
+              duplicate entries from degrading the catalog.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Platform listing management</h3>
+            <p>
+              We operate storefronts and listings across surfaces with correct data, media, and rights so your catalog
+              stays legible to customers and partners.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Rights records</h3>
+            <p>
+              We maintain the documentation that establishes ownership and supports enforcement when your catalog is
+              challenged or misused.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="ecosystem" class="section">
+        <h2>Ecosystem connections</h2>
+        <div class="bullets">
+          <p>
+            Distribution protects and operates what
+            <a href="https://hero.texasmovement.com" target="_blank" rel="noreferrer">HERO by Texas Movement</a> puts into
+            the world.
+          </p>
+          <p>
+            It uses systems thinking from
+            <a href="https://consulting.texasmovement.com" target="_blank" rel="noreferrer">Texas Movement Consulting</a>
+            to keep operations stable and documented.
+          </p>
+          <p>
+            It sits under
+            <a href="https://texasmovement.com" target="_blank" rel="noreferrer">Texas Movement International</a>, as one
+            lane in a larger system built for people who move.
+          </p>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+          <div class="faq-item">
+            <h3>What does Texas Movement Distribution do?</h3>
+            <p>
+              It protects catalogs and runs platform operations—IP defense, listing management, and the records behind
+              rights—for brands and partners inside and alongside Texas Movement.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Is this a legal service?</h3>
+            <p>
+              No. It is operations and documentation that support enforcement and your counsel. It does not provide
+              legal advice or representation.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>What platforms does it cover?</h3>
+            <p>
+              The surfaces where your catalog and brand appear—marketplaces, storefronts, and social commerce—handled
+              in a platform-native way.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>How does enforcement work?</h3>
+            <p>
+              We monitor, document, and act through a repeatable workflow. Enforcement is evidence-based, calm, and
+              grounded in records.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>How does this connect to the rest of Texas Movement?</h3>
+            <p>
+              It protects and operates what HERO and Media put into the world, using Consulting-grade systems, all under
+              the Texas Movement International structure.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <h2>Contact</h2>
+        <p>Open a partner inquiry with context about your catalog, platforms, and what a good outcome would look like.</p>
+        <a href="mailto:movementconsultant@gmail.com" class="email">movementconsultant@gmail.com</a>
+        <p class="fineprint">
+          Texas Movement Distribution does not provide legal advice. No attorney-client relationship is formed through this site.
+        </p>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-row">
+          <p>© 2026 Texas Movement International · Systems for people who move.</p>
+          <div class="footer-links">
+            <a href="#overview">Back to top ↑</a>
+            <span class="footer-separator">·</span>
+            <a href="https://alexandermathai.com" target="_blank" rel="noreferrer">Founder</a>
+            <span class="footer-separator">·</span>
+            <a href="https://texasmovement.com" target="_blank" rel="noreferrer">TMI</a>
+            <span class="footer-separator">·</span>
+            <a href="https://consulting.texasmovement.com" target="_blank" rel="noreferrer">TMC</a>
+            <span class="footer-separator">·</span>
+            <a href="https://hero.texasmovement.com" target="_blank" rel="noreferrer">HERO</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
 </html>
